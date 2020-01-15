@@ -1,11 +1,12 @@
 
 .container{
     /*background-color: blue;*/
-    height:auto;
+    height:100%;
     width: 100%;
     display: grid;
-    grid-template-areas: ". .""Nav Nav""about .";
-    grid-template-rows: 70px 25px 35px auto auto auto;
+    grid-template-areas: ". . .""Nav Nav Nav""about . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .";
+    grid-template-rows: 70px 25px 35px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+    grid-template-columns: 650px 100px auto;
 }
 html, body { 
     margin: 0; 
@@ -46,12 +47,14 @@ html, body {
     #logo{
         width: 100px;
         height: auto;
+        margin-left: 15px;
     }
     input{
 
         width: 580px;
         height: 10;
         font-size: 14px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
         text-align:start;
         color: black;
         border: 0.5px solid #cfcac8;
@@ -111,15 +114,83 @@ html, body {
 .nav:hover{
     color: blue;
 }
-a{
-    color: inherit;
-    text-decoration: inherit;
-}
 #about{
     color: gray;
     grid-area: about;
-    font-size: 12px;
+    font-size: 13px;
     align-self: center;
     justify-self: center;
-    margin-left: -40px;
+    margin-left: -110px;
 }
+.main{
+grid-area:main;
+justify-self:center;
+margin-left: -100px;
+}
+span {
+    color: green;
+    font-size: 14px;
+    text-align: start;
+    position: relative;
+    bottom: 10px;
+}    
+.submain h3{
+    color: blue;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    align-self: end;
+    margin-top: 5px;
+    position:relative;
+    top: 10px;
+}
+.submain h3:hover{
+    text-decoration: underline;
+
+}
+.submain p{
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    bottom: 20px;
+    overflow-wrap: break-word;
+    display: block;
+    width: inherit;
+}
+.submain{
+    position: relative;
+    margin-left:220px;
+}
+#second{
+    grid-area:5/1/6/2;}
+    #third{
+        grid-area:6/1/7/2;}
+            #fourth{
+ grid-area:7/1/8/2;}
+#fifth{
+                grid-area:8/1/9/2;}
+            #sixth{
+                grid-area:9/1/10/2;}
+                #seventh{
+                    grid-area:10/1/11/2;}
+                    #eighth{
+                        grid-area:11/1/12/2;}
+                        #ninth{
+                            grid-area:12/1/13/2;}
+                            #tenth{
+                                grid-area:13/1/14/2;}
+   
+                                #eleventh{
+                                    grid-area:14/1/15/2;}                    
+                
+                                    #twelth{
+                                        grid-area:15/1/16/2;}
+                                        #thirteenth{
+                                            grid-area:16/1/17/2;} 
+                                            #fourteenth{
+                                                    grid-area:17/1/18/2;}
+                                             
+                      
+             
+
+    
+
