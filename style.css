@@ -1,14 +1,15 @@
 
 .container{
     /*background-color: blue;*/
-    height:100%;
+    height:auto;
     width: 100%;
     display: grid;
     grid-template-areas: ". . .""Nav Nav Nav""about . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .""main . .";
-    grid-template-rows: 70px 25px 35px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+    grid-template-rows: 70px 25px 35px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px 80px;
     grid-template-columns: 650px 100px auto;
 }
 html, body { 
+    font-family:Arial, Helvetica, sans-serif
     margin: 0; 
     padding: 0; 
     width: 100%; 
@@ -18,7 +19,6 @@ html, body {
       margin: 0;
       padding: 0;
       font-size: 13px;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
         color:grey;
       display:grid;
       height: 10%;
@@ -37,12 +37,16 @@ html, body {
     .header{
         display: grid;
         padding: 5px;
-        height: 8%;
+        padding-top: 10px;
+        height: auto;
         width: 98%;
         grid-template-columns: auto auto 500px auto;
         grid-template-rows: auto;
         margin-top: 1%;
         position:fixed;
+        z-index: 9999;
+        overflow: hidden;
+        background-color: white;
     }
     #logo{
         width: 100px;
@@ -54,7 +58,7 @@ html, body {
         width: 580px;
         height: 10;
         font-size: 14px;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
+
         text-align:start;
         color: black;
         border: 0.5px solid #cfcac8;
@@ -88,7 +92,6 @@ html, body {
     width: 80px;
     border:0.5px solid rgb(240,240,240);
     background-color:#4285f4;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:whitesmoke;
     font-weight: bold;
     border-radius: 4px; 
@@ -137,7 +140,6 @@ span {
 .submain h3{
     color: blue;
     font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     align-self: end;
     margin-top: 5px;
     position:relative;
@@ -149,7 +151,6 @@ span {
 }
 .submain p{
     font-size: 14px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     bottom: 20px;
     overflow-wrap: break-word;
@@ -189,8 +190,126 @@ span {
                                             #fourteenth{
                                                     grid-area:17/1/18/2;}
                                              
-                      
-             
+.end{
+    grid-area: 18/1/19/2;
+    display: flex;
+    flex-direction: row;
+    margin-left:120px;
 
+}    
+.end h3{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+   margin-bottom: 5px;
+}                  
+.end a{
+    font-size: 14px;
+    font-family:Arial,Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    font-weight: bolder;
+}  
+#left{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    align-content: space-between;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    align-self: flex-end;
+    align-content: space-between;
     
+}
+#right >*{
+    align-self: flex-start;
+    padding:2px;
+}
+#left >*{
+    padding:2px;
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    grid-area: 19/1/20/2;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+.pag{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+    #G{
+        height: 40px;
+        position: relative;
+        bottom:2px;
+    }
+    .pagination >*:not(#G){
+        margin-top: 5px;
+    }
+#ofirst{
+    margin-top: 2px;
+}
+#l{
+    width: 8px;
+    height: 30px;
+}
+#gle{
+    position:relative;
+    bottom:8px;
+    height: 10px;
+    left:2px;
+}
+.end a:hover{
+text-decoration: underline;
+}
+.pag a:not(#ofirst){
+    color: blue;
+    display: block;
+}
+.pag a:not(#ofirst):hover{
+    text-decoration: underline;
+}
+#Next{
+   align-self: flex-end;
+   margin-bottom: 39px;
+   margin-left: 15px;
+   color: blue;
+   font-size: 14px;
+}
+#Next:hover{
+    text-decoration: underline;
+}
+.pag:not(#ofirst):hover{
+    text-decoration: underline;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    grid-area: 20/1/21/4;
+    background-color: rgb(240,240,240);
+}
+.top{
+    display: inline-block;
+    color: grey;
+    font-size: 14px;
+    margin-left: 120px;
+    margin-top:10px;
+    
+}
+.top>*{
+    padding: 2px;
 
+}
+.bottom{
+    display: inline-block;
+    color: grey;
+    font-size: 14px;
+    margin-left: 116px;
+    margin-top:20px
+}
+.bottom>*{
+    padding: 7px;}
